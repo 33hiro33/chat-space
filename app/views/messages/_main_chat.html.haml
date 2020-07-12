@@ -1,0 +1,38 @@
+.main-box
+
+  .main-header
+    .main-header__group
+      .main-header__group__group-name
+        test
+      .main-header__group__group-list
+        member:
+        .main-header__group__group-list__member
+          sample888
+    = link_to "#", class: "main-header__edit__btn" do
+      Edit
+
+  .message-field
+    .message-box
+      .message-info
+        .message-info__user-name
+          テスト
+        .message-info__date
+          2020年07月12日 15時27分
+      .message
+        .message-content
+          こんにちわ！
+        
+  .footer
+    .form
+      .form-contents
+        %input.login-input-text{:name => "message", :placeholder => "type a message", :type => "text", :value => ""}/
+        .form-contents__image
+          %label{class: "input-box__image2"}
+            = icon('fas', 'image')
+            %input{type: "file"}
+      .send-btn
+        Send
+        
+      
+            
+      
