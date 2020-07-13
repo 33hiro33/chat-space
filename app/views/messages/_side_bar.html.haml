@@ -2,11 +2,13 @@
   .side-header
     .side-header__user
       .side-header__name 
-        TEST123
+        .chat-space_user-manege
+          = current_user.name
+
       .side-header__iconlist
         = link_to "#" do
           = icon('far', 'edit', class: 'btn1')
-        = link_to "#" do
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'btn2')
   .side-header_group-list
     .side-group
