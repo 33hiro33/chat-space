@@ -29,12 +29,13 @@
     }
       &__name {
         color: #ffffff;
-        font-size: 16px;
+        font-size: 13px;
         font-weight: bold;
+        padding-top: 3px;
         }
     &__iconlist {
         width: 65px;
-        padding-left: 25px;
+        padding-left: 28px;
         color: #ffffff;
         font-size: 15px;
         display: flex;
@@ -86,7 +87,6 @@
     justify-content: space-between;
     &__group {
       margin: 0;
-      padding: 0 40px;
       &__group-name {
         color: #333333;
         font-size: 20px;
@@ -100,6 +100,7 @@
         &__member {
           color: #999999;
           font-size: 12px;
+          padding-left: 5px;
         }
       }
     }
@@ -189,10 +190,10 @@
     }
       .send-btn {
         background-color: #38AEF0;
-        width: 10%;
+        width: 12%;
         height: 50px;
         color: #ffffff;
-        margin: 0 10px 0 20px;
+        margin: 0 0 0 14px;
         padding: 12px 0 0 0 ;
         text-align: center;
       }
