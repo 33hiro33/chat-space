@@ -6,22 +6,18 @@
           = current_user.name
 
       .side-header__iconlist
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('far', 'edit', class: 'btn1')
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'btn2')
+  
+  
   .side-header_group-list
-    .side-group
-      .side-group__name 
-        テスト1
-      .side-group__message 
-        こんにちわ！
-      .side-group__name 
-        テスト２
-      .side-group__message 
-        こんにちわ！
-      .side-group__name 
-        テスト３
-      .side-group__message 
-        こんにちわ！
+    - current_user.groups.each do |group|
+      .side-group
+        = link_to "#" do
+          .side-group__name 
+            = group.name
+          .side-group__message 
+            メッセージはまだありません
       

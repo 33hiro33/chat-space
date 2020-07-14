@@ -8,6 +8,7 @@
   display: flex;
 }
 
+
 .side-box {
   width: 300px;
   height: 100vh;
@@ -62,12 +63,17 @@
       color: #ffffff;
       box-sizing: border-box;
       padding: 20px 0 40px;
+      a {
+        text-decoration: none;
+      }
       &__name {
         font-size: 15px;
+        color: #ffffff;
       }
       &__message {
         font-size: 11px;
         margin-top: 5px;
+        color: #ffffff;
       }
     }
   }
