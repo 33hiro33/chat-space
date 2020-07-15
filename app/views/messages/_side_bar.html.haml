@@ -1,10 +1,9 @@
 .side-box
   .side-header
     .side-header__user
-      .side-header__name 
+      .side-header__name
+        = current_user.name
         .chat-space_user-manege
-          = current_user.name
-
       .side-header__iconlist
         = link_to new_group_path do
           = icon('far', 'edit', class: 'btn1')
@@ -15,9 +14,8 @@
   .side-header_group-list
     - current_user.groups.each do |group|
       .side-group
-        = link_to "#" do
+        = link_to group_messages_path(group) do
           .side-group__name 
             = group.name
           .side-group__message 
-            メッセージはまだありません
-      
+            = group.show_last_message

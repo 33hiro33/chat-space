@@ -103,11 +103,6 @@
         display: flex;
         font-size: 12px;
         padding: 15px 0 0;
-        &__member {
-          color: #999999;
-          font-size: 12px;
-          padding-left: 5px;
-        }
       }
     }
     &__edit__btn {
@@ -174,7 +169,7 @@
       }
       .form-contents {
         width: 100%;
-        background-color: #fff;
+        background-color: #ffffff;
         display: flex;
         position: relative;
         &__input-form {
@@ -188,20 +183,18 @@
           right: 5px;
           padding: 8px 5px ;
           font-size: 25px;
-            input {
+        }
+            .Hidden {
               display: none;
             }
-        }
+        
       }
     }
       .send-btn {
         background-color: #38AEF0;
         width: 12%;
-        height: 50px;
         color: #ffffff;
         margin: 0 0 0 14px;
-        padding: 12px 0 0 0 ;
-        text-align: center;
       }
        
  }
