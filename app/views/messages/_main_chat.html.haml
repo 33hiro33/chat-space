@@ -1,45 +1,23 @@
 .main-box
-
   .main-header
     .main-header__group
       .main-header__group__group-name
-        test
+        = @group.name
       .main-header__group__group-list
-        Member :
-        .main-header__group__group-list__member
-          sample888
-    = link_to "#", class: "main-header__edit__btn" do
+        Member:
+        - @group.users.each do |user|
+          = user.name
+    = link_to edit_group_path(@group.id), class: "main-header__edit__btn" do
       Edit
 
   .message-field
-    .message-box
-      .message-info
-        .message-info__user-name
-          テスト
-        .message-info__date
-          2020年07月12日 15時27分
-      .message
-        .message-content
-          こんにちわ！
-        
+    = render @messages
+    
   .footer
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form-contents
-        %input.login-input-text{name: "message", placeholder: "type a message", type: "text", value: ""}/
-        .form-contents__image
-          %label{class: "input-box__image2"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-    .send-btn
-      Send
-        
-    -#   .footer
-    -# = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
-    -#   .form__contents
-    -#     = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
-    -#     = f.label :image, class: 'Form__inputImage' do
-    -#       = icon('far', 'image', class: 'Form__icon')
-    -#       = f.file_field :image, class: 'Hidden'
-    -#   = f.submit 'Send', class: 'Form__submit'
-            
-      
+        = f.text_field :content, class: 'login-input-text', placeholder: 'type a message'
+        = f.label :image, class: 'form-contents__image' do
+          = icon('far', 'image', class: 'input-box__image2')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'send-btn'
