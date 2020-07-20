@@ -20,7 +20,7 @@ $(function(){
          </div>`
       return html;
     } else {
-        let  html =
+        let html =
         `<div class="message-box">
           <div class="message-info">
             <div class="message-info__user-name">
